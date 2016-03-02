@@ -1,0 +1,103 @@
+#clickableAwesomeFont {
+     cursor: pointer
+}
+
+hr {
+    margin-top: 2px; 
+    margin-bottom: 2px; 
+    border: 0;
+    border-top: 1px solid #1c1e22;
+}
+
+span.tab{
+    padding-left:5em;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.bold{
+    font-weight:bold;
+}
+table {
+    border-collapse: separate;
+}
+
+.post-row {
+    margin-bottom: 4px;
+}
+
+.post-image-holder {
+    padding-top: 2px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.post-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: #ececec;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.post-image-dash{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-color: #ececec;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.p-dash{
+    text-overflow: ellipsis; /* will make [...] at the end */
+    width: 120px; /* change to your preferences */
+    white-space: nowrap; /* paragraph to one line */
+    overflow:hidden; /* older browsers */
+}
+
+.post-description {
+    text-align: left;
+    font-size: 14px;
+}
+
+.input-group-addon {
+    color: #cccccc !important; 
+}
+
+p.table {
+    width: 495px;
+    text-align: justify;
+}
+
+.verticalLine {
+    border-left: thick solid #ff0000;
+}
+
+.noBorder {
+    border-collapse: inherit !important; 
+}
+
+.tableNoSpace {
+    margin-bottom: 0px !important;
+}
+
+.avoid-clicks {
+  cursor: default;
+}
+
+.mobile-only{
+    display: none;
+}
+
+#td-icon {
+    padding-left: 0px !important;
+}
+    

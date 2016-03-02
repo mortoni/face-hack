@@ -1,0 +1,67 @@
+<div class="page page-dashboard">
+
+  <div class="pageheader">
+
+    <h2>{{page.title}} <span></h2>
+
+    <div class="page-bar">
+
+      <ul class="page-breadcrumb">
+        <li>
+          <a ui-sref="app.dashboard"><i class="fa fa-home"></i> Face-hack</a>
+        </li>
+        <li>
+          <a ui-sref="app.dashboard">{{page.title}}</a>
+        </li>
+      </ul>
+
+      <div ng-controller="DaterangepickerCtrl" class="page-toolbar">
+        <a class="btn btn-lightred no-border"  >
+          <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span>{{startDate}}</span>&nbsp;&nbsp;
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <br>
+    <div class="col-sm-3"></div>
+    <div class="form-group has-feedback">
+        <div class="col-sm-5">
+            <div class="large-padded-row">
+                <div class="padded-row">
+                    <angucomplete id="ex1"
+                          placeholder="Page name"
+                          pause="100"
+                          selectedobject="selectedPage"
+                          localdata="pagesInDB"
+                          searchfields="name"
+                          titlefield="name"
+                          descriptionfield="likes" 
+                          imagefield="image"
+                          minlength="1"
+                          inputclass="form-control form-control-small"
+                          matchclass="highlight"
+                          ng-keyup="$event.keyCode == 13 && vm.searchPage()"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-1">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" ng-click="vm.searchPage()" class="btn btn-danger sendButton" >Hack</button>
+
+                    <button type="button" class="btn btn-danger" ng-click="vm.configuration()">
+                        <span class="fa fa-cogs"></span>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>  
+      
+      
+</div>

@@ -1,0 +1,82 @@
+{
+  "Menu": {
+    "DASHBOARD": "Dashboard",
+    "HACK": "Hack",
+    "DATABASE": "Data Base",
+    "ABOUTME": "About me",
+    "NAVIGATION": "Navigation",
+    "SUMMARY": "Summary",
+    "WEEKHACK": "This Week Hack",
+    "WEEKPOST": "This Week Posts"
+    },
+
+   "Header": {
+    "HEADERCOL": "Header Color",
+    "BRANDCOL": "Branding Color", 
+    "SIDEBARCOL": "Sidebar Color",
+    "ACTIVECOL": "Active Color",
+    "FIXHEADER": "Fixed Header",
+    "FIXASIDE": "Fixed Aside",
+    "PROFILE": "Profile",
+    "TASKS": "Tasks",
+    "SETTINGS": "Settings",
+    "LOCK": "Lock",
+    "LOGOUT": "Logout"
+   }, 
+
+  "Dashboard": {
+    "ENTRY1": "Facebook Page Name",
+    "SPY": "SPY",
+    "HACK": "HACK",
+    "MORE": "More",
+    "TOOLTIP": "Press 'Enter' to hack"
+   },
+
+  "Database":{
+    "HACK": "Hacking",
+    "FEED": "Feed",
+    "PAGE": "Page",
+    "TYPE": "Type",
+    "LIKES": "Likes",
+    "SHARES": "Shares",
+    "DATE": "Date",
+    "COMENTS": "Coments",
+    "SCORE": "Score",
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "VIEW": "View",
+    "SHARE": "Share",
+    "REFRESH": "Refresh"
+  },
+
+  "Spy":{
+    "PAUSE": "Pause",
+    "RESUME": "Resume",
+    "DELETE": "Delete",
+    "HACK": "Hacking",
+    "DETAILS": "Details",
+    "FEED": "Feed",
+    "PAGE": "Page",
+    "TYPE": "Type",
+    "LIKES": "Likes",
+    "SHARES": "Shares",
+    "DATE": "Date"
+  },
+
+  "Hack":{
+    "READMORE": "Read More"
+  },
+  
+  "Modal": {
+    "READMORE": "Read More",
+    "DELETE": "Delete",
+    "CANCEL": "Cancel",
+    "QUESTION1": "Are you sure?",
+    "INFO": "Info Page",
+    "QUESTION2": "Share post",
+    "SHARE": "Share",
+    "QUESTION3": "Post"
+  }
+    
+}
+

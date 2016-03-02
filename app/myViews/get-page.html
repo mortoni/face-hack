@@ -1,0 +1,139 @@
+<div class="page page-dashboard">
+
+	<div class="pageheader">
+
+		<h2>{{page.title}} <span></h2>
+
+		<div class="page-bar">
+
+			<ul class="page-breadcrumb">
+				<li>
+					<a ui-sref="app.dashboard"><i class="fa fa-home"></i> Face-hack</a>
+				</li>
+				<li>
+					<a ui-sref="app.get">{{page.title}}</a>
+				</li>
+			</ul>
+
+			<div ng-controller="DaterangepickerCtrl" class="page-toolbar">
+				<a class="btn btn-default no-border"  style="cursor: default;">
+					<i class="fa fa-calendar"></i>&nbsp;&nbsp;<span>{{startDate}}</span>&nbsp;&nbsp;
+				</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="col-md-4">	  
+		<div class="card-container col-lg-12 col-sm-12 col-sm-12" ng-repeat="page in pages">
+			<div class="card"> 
+				<div class="front bg-blue"> <!-- row --> 
+					<div class="row">
+						<!-- col -->
+						<div class="col-xs-4">
+							<img ng-src="{{ page.picture }}" class="post-image-dash">
+						</div>
+						<!-- /col -->
+						<!-- col -->
+						<div class="col-xs-8">
+							<p class="text-lg text-strong mb-0">{{ page.likes | number }} <i class="fa fa-thumbs-o-up"></i></p>
+							<p class="text-sm text-strong mb-0 p-dash"> {{page.name}}</p>
+						</div>
+						<!-- /col -->
+					</div>
+				</div> 
+				<div class="back bg-slategray"> <!-- row --> 
+					<div class="row">
+						<div class="col-xs-4" ng-show="page.stat == 'resume'">
+							<a ng-click="pause(page)"><i class="fa fa-pause faa-burst animated fa-2x fa fa-pause"></i> {{ 'Spy.PAUSE' | translate }}</a>
+						</div>
+						<div class="col-xs-4" ng-show="page.stat == 'pause'">
+
+							<a ng-click="resume(page)"><i class="fa fa-play fa-2x"></i> {{ 'Spy.RESUME' | translate }}</a>
+						</div>
+
+						<div class="col-xs-4" ng-show="page.stat == 'pause'">
+							<a ng-click="deletePage(page)"><i class="fa fa-trash fa-2x"></i> {{ 'Spy.DELETE' | translate }}</a>
+						</div>
+						<div class="col-xs-4" ng-show="page.stat == 'resume'" >
+							<a style="cursor: default;"><i class="fa fa-cog faa-spin animated fa-2x"></i>{{ 'Spy.HACK' | translate }}</a>
+						</div>
+
+						<div class="col-xs-4">
+							<a ng-click="vm.viewPage(page)" 
+							data-toggle="collapse" 
+							data-target="#collapseDiv">
+							<i class="pointer fa fa-folder fa-2x"></i> {{ 'Spy.DETAILS' | translate }}
+						</a>
+					</div>
+					<md-divider class="md-default-theme"></md-divider>  
+				</div>
+			</div> 
+		</div> 
+	</div>
+</div>
+
+<div class="col-md-8" ng-show="posthacked.length > 0">
+	<!-- DATA TABLE-->
+	<section class="tile" fullscreen="isFullscreen06">
+
+		<!-- tile header -->
+		<div class="tile-header dvd dvd-btm">
+			<h1 class="custom-font"><strong>{{ 'Spy.HACK' | translate }} </strong>{{ 'Spy.FEED' | translate }}</h1>
+		</div>
+		<!-- /tile header -->
+
+		<!-- tile body -->
+		<div class="tile-body table-custom">
+			<div class="table-responsive">
+				<table datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs" class="table table-custom">
+					<thead>
+						<tr>
+							<th>{{ 'Spy.PAGE' | translate }}</th>
+							<th>{{ 'Spy.TYPE' | translate }}</th>
+							<th>{{ 'Spy.LIKES' | translate }}</th>
+							<th>{{ 'Spy.SHARES' | translate }}</th>
+							<th>{{ 'Spy.DATE' | translate }}</th>
+                <!--<th style="width: 180px;">Status</th>
+                <th style="width: 60px;" class="text-right">Chart</th>-->
+            </tr>
+        </thead>
+        <tbody>
+        	<tr ng-repeat="post in posthacked">
+        		<td>
+        			<span class="label bg-dutch"><i class="fa fa-facebook-official"></i> {{ post.page_name }} </span>
+        		</td>
+        		<td>
+        			<a ng-show="post.type == 'video'">
+        				<span class="label bg-red"><i class="fa fa-film"></i></span>
+        			</a>
+        			<a ng-show="post.type == 'link'">
+        				<span class="label bg-cyan"><i class="fa fa-link"></i></span>
+        			</a>
+        			<a ng-show="post.type == 'photo'">
+        				<span class="label bg-greensea"><i class="fa fa-picture-o"></i></span>
+        			</a>
+        		</td>
+        		<td>
+        			<span class="label bg-lightred">{{ post.likes.summary.total_count | number }} <i class="fa fa-thumbs-up"></i></i></span>
+        		</td>
+        		<td>
+        			<span class="label bg-drank">{{ post.shares.count | number }} <i class="fa fa-share-alt"></i></span>
+        		</td>
+        		<td>
+        			<span class="label bg-info"><i class="fa fa-clock-o"></i> {{ post.time }} </span>
+        		</td>
+
+        	</tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+<!-- /tile body -->
+
+</section>
+</div>
+
+</div>

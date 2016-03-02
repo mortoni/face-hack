@@ -1,0 +1,193 @@
+{
+  "name": "minovate",
+  "version": "1.2.0",
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-animate": "1.4.6",
+    "angular-bootstrap": "~0.13.4",
+    "angular-bootstrap-colorpicker": "~3.0.19",
+    "angular-bootstrap-nav-tree": "*",
+    "angular-chosen-localytics": "~1.0.7",
+    "angular-cookies": "1.4.6",
+    "angular-datatables": "~0.5.0",
+    "d3": "~3.5.6",
+    "angular-file-upload": "~2.1.4",
+    "angular-flot": "~0.0.13",
+    "angular-fontawesome": "~0.4.0",
+    "angular-fullscreen": "~1.0.1",
+    "angular-google-maps": "~2.2.1",
+    "angular-intro.js": "~1.3.0",
+    "angular-ipsum": "~0.0.4",
+    "angular-leaflet-directive": "~0.8.8",
+    "angular-loading-bar": "~0.8.0",
+    "angular-masonry": "latest",
+    "angular-material": "~0.11.1",
+    "angular-messages": "1.4.6",
+    "angular-momentjs": "~0.2.2",
+    "angular-resource": "1.4.6",
+    "angular-rickshaw": "~0.5.0",
+    "angular-sanitize": "1.4.6",
+    "angular-smart-table": "~2.1.3",
+    "angular-toastr": "~1.5.0",
+    "angular-touch": "1.4.6",
+    "angular-translate": "~2.8.0",
+    "angular-translate-loader-static-files": "~2.8.0",
+    "angular-translate-storage-local": "~2.8.0",
+    "angular-ui-calendar": "~0.8.1",
+    "angular-ui-grid": "~3.0.6",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui-select": "~0.12.1",
+    "angular-ui-tree": "~2.9.0",
+    "angular-ui-utils": "~0.2.3",
+    "animate.css": "~3.4.0",
+    "bootstrap": "~3.3.5",
+    "bootstrap-daterangepicker": "~2.0.11",
+    "bourbon": "~4.2.5",
+    "chosen": "https://github.com/harvesthq/chosen/releases/download/1.4.2/chosen_v1.4.2.zip",
+    "es5-shim": "~4.1.13",
+    "flot": "~0.8.3",
+    "flot-spline": "*",
+    "flot.tooltip": "~0.8.4",
+    "font-awesome": "~4.4.0",
+    "html.sortable": "~0.3.0",
+    "imagesloaded": "latest",
+    "jquery.easy-pie-chart": "~2.1.6",
+    "jquery.inputmask": "~3.2.0",
+    "jquery.slimscroll": "~1.3.6",
+    "jquery.sparkline": "http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js",
+    "json3": "~3.3.2",
+    "leaflet": "~0.7.5",
+    "leaflet-draw": "~0.2.4",
+    "leaflet-heat": "https://github.com/Leaflet/Leaflet.heat/archive/gh-pages.zip",
+    "leaflet-plugins": "~1.3.6",
+    "masonry": "latest",
+    "material-design-iconic-font": "~2.1.1",
+    "morrisjs": "~0.5.1",
+    "ng-bs-daterangepicker": "~0.0.5",
+    "ng-table": "~1.0.0-beta.5",
+    "ng-tags-input": "3.0.0",
+    "ngImgCrop": "~0.3.2",
+    "oclazyload": "~1.0.5",
+    "owl-carousel": "~1.3.2",
+    "rickshaw": "~1.5.1",
+    "simple-line-icons": "~2.2.1",
+    "textAngular": "~1.4.6",
+    "weather-icons": "~2.0.10",
+    "dragular": "latest",
+    "angucomplete": "*",
+    "angularfire": "^1.1.3",
+    "ngprogress": "^1.1.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.16",
+    "angular-scenario": "1.2.16"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/js/bootstrap.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
+      ]
+    },
+    "material-design-iconic-font": {
+      "main": [
+        "./dist/css/material-design-iconic-font.css"
+      ]
+    },
+    "chosen": {
+      "main": [
+        "chosen.jquery.min.js",
+        "chosen.min.css"
+      ]
+    },
+    "rickshaw": {
+      "main": [
+        "rickshaw.js",
+        "rickshaw.min.css"
+      ]
+    },
+    "angular-toastr": {
+      "main": [
+        "./dist/angular-toastr.css",
+        "./dist/angular-toastr.tpls.js"
+      ]
+    },
+    "flot": {
+      "main": [
+        "jquery.flot.js",
+        "jquery.flot.resize.js"
+      ]
+    },
+    "flot-spline": {
+      "main": "./js/jquery.flot.spline.min.js"
+    },
+    "jquery.easy-pie-chart": {
+      "main": "./dist/angular.easypiechart.min.js",
+      "dependencies": {
+        "jquery": ">=1.9.0"
+      }
+    },
+    "angular-datatables": {
+      "main": [
+        "./dist/angular-datatables.min.js",
+        "./dist/plugins/bootstrap/angular-datatables.bootstrap.min.js",
+        "./dist/plugins/colreorder/angular-datatables.colreorder.min.js",
+        "./dist/plugins/columnfilter/angular-datatables.columnfilter.min.js",
+        "./dist/plugins/colvis/angular-datatables.colvis.min.js",
+        "./dist/plugins/fixedcolumns/angular-datatables.fixedcolumns.min.js",
+        "./dist/plugins/fixedheader/angular-datatables.fixedheader.min.js",
+        "./dist/plugins/scroller/angular-datatables.scroller.min.js",
+        "./dist/plugins/tabletools/angular-datatables.tabletools.min.js"
+      ]
+    },
+    "owl-carousel": {
+      "main": [
+        "./owl-carousel/owl.carousel.min.js",
+        "./owl-carousel/owl.carousel.css",
+        "./owl-carousel/owl.theme.css"
+      ]
+    },
+    "jquery.inputmask": {
+      "main": "./dist/jquery.inputmask.bundle.js"
+    },
+    "leaflet-draw": {
+      "main": [
+        "./dist/leaflet.draw.js",
+        "./dist/leaflet.draw.css"
+      ],
+      "dependencies": {}
+    },
+    "masonry": {
+      "main": [
+        "./dist/masonry.pkgd.min.js"
+      ],
+      "dependencies": {}
+    },
+    "textAngular": {
+      "main": [
+        "./dist/textAngular-rangy.min.js",
+        "./dist/textAngular-sanitize.min.js",
+        "./dist/textAngular.min.js"
+      ],
+      "dependencies": {}
+    },
+    "leaflet-heat": {
+      "main": "./dist/leaflet-heat.js"
+    }
+  },
+  "appPath": "app",
+  "resolutions": {
+    "angular": "1.4.6",
+    "bootstrap": "~3.3.5",
+    "rickshaw": "~1.5.1",
+    "jquery": ">= 1.9.0",
+    "d3": "~3.5.6",
+    "bootstrap-daterangepicker": "~2.0.11",
+    "moment": ">=2.9.0"
+  }
+}

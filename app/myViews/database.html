@@ -1,0 +1,130 @@
+<div class="page page-dashboard">
+
+	<div class="pageheader">
+
+		<h2>{{page.title}} <span></h2>
+
+		<div class="page-bar">
+
+			<ul class="page-breadcrumb">
+				<li>
+					<a ui-sref="app.dashboard"><i class="fa fa-home"></i> Face-hack</a>
+				</li>
+				<li>
+					<a ui-sref="app.database">{{page.title}}</a>
+				</li>
+			</ul>
+
+			<div ng-controller="DaterangepickerCtrl" class="page-toolbar">
+				<a class="btn btn-default no-border"  style="cursor: default;">
+					<i class="fa fa-calendar"></i>&nbsp;&nbsp;<span>{{startDate}}</span>&nbsp;&nbsp;
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+	<section class="tile" fullscreen="isFullscreen06">
+
+		<!-- tile header -->
+		<div class="tile-header dvd dvd-btm">
+			<h1 class="custom-font"><strong>{{ 'Database.HACK' | translate }} </strong>{{ 'Database.FEED' | translate }}</h1>
+		</div>
+		<!-- /tile header -->
+
+		<!-- tile body -->
+		<div class="tile-body table-custom">
+			<div class="table-responsive">
+				<table datatable="ng" dt-options="dtOptions" dt-column-defs="dtColumnDefs" class="table table-custom">
+					<thead>
+						<tr>
+							<th>{{ 'Database.PAGE' | translate }}</th>
+							<th>{{ 'Database.TYPE' | translate }}</th>
+							<th>{{ 'Database.LIKES' | translate }}</th>
+							<th>{{ 'Database.SHARES' | translate }}</th>
+							<th>{{ 'Database.DATE' | translate }}</th>
+							<th>{{ 'Database.COMENTS' | translate }}</th>
+							<th>{{ 'Database.SCORE' | translate }}</th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="(key, post) in posts">
+							<td>
+								<span class="label bg-dutch"><i class="fa fa-facebook-official"> </i> {{ post.page_name }} </span>
+							</td>
+							<td>
+								<a ng-show="post.type == 'video'">
+									<span class="label bg-red"><i class="fa fa-film"></i></span>
+								</a>
+								<a ng-show="post.type == 'link'">
+									<span class="label bg-cyan"><i class="fa fa-link"></i></span>
+								</a>
+								<a ng-show="post.type == 'photo'">
+									<span class="label bg-greensea"><i class="fa fa-picture-o"></i></span>
+								</a>
+							</td>
+							<td>
+								<span class="label bg-lightred">{{ post.likes | number }} <i class="fa fa-thumbs-up"></i></span>
+							</td>
+							<td>
+								<span class="label bg-drank">{{ post.shares | number }} <i class="fa fa-share-alt"></i></span>
+							</td>
+							<td>
+								<span class="label bg-info">{{ post.created_time | date : "dd/MM"}} <i class="fa fa-calendar-o"></i></span>
+								<span class="label bg-info">{{ post.created_time | date : "hh'h'mm"}} <i class="fa fa-clock-o"></i></span>
+							</td>
+							<td>
+								<span class="label bg-danger">{{ post.comments | number }} <i class="fa fa-comment"></i></span>
+							</td>
+
+							<td>
+								<span ng-show="post.score >= 0" class="label label-success"><i class="fa fa-star"></i> {{ post.score  | number:12 }}</span>
+								<span ng-show="post.score < 0" class="label label-danger"><i class="fa fa-star"></i> {{ post.score  | number:12 }}</span>
+							</td>
+							
+							<td id="td-icon">
+								<a ng-click="deletePost(post)" data-options="splash-2 splash-primary splash-ef-2" class="btn btn-rounded-20 btn-default btn-sm mr-3">
+									<span id="clickableAwesomeFont" class="fa fa-trash-o fa-1x"></span>
+									<md-tooltip>{{ 'Database.DELETE' | translate }}</md-tooltip>
+								</a>
+
+							</td>
+							<td id="td-icon">
+								<a ng-click="editPost(post)" data-toggle="collapse" data-target="#edit{{post.id}}" class="btn btn-rounded-20 btn-default btn-sm mr-3">
+									<span id="clickableAwesomeFont" class="fa fa-pencil fa-1x"></span>
+									<md-tooltip>{{ 'Database.EDIT' | translate }}</md-tooltip>
+								</a>
+							</td>
+							<td id="td-icon">
+								<a ng-click="viewPost(post)" class="btn btn-rounded-20 btn-default btn-sm mr-3">
+									<span id="clickableAwesomeFont" class="fa fa-eye fa-1x"></span>
+									<md-tooltip>{{ 'Database.VIEW' | translate }}</md-tooltip>
+								</a>
+							</td>
+							<td id="td-icon">
+								<a ng-click="sharePost(post)" class="btn btn-rounded-20 btn-default btn-sm mr-3">
+									<span id="clickableAwesomeFont" class="fa fa-share-alt fa-1x"></span>
+									<md-tooltip>{{ 'Database.SHARE' | translate }}</md-tooltip>
+								</a>
+							</td>
+							<td id="td-icon">
+								<a class="btn btn-rounded-20 btn-default btn-sm mr-3">
+									<span id="clickableAwesomeFont" class="fa fa-refresh fa-1x"></span>
+									<md-tooltip>{{ 'Database.REFRESH' | translate }}</md-tooltip>
+								</a>
+							</td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<!-- /tile body -->
+	</section>
+</div>

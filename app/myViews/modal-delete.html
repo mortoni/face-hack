@@ -1,0 +1,77 @@
+<div class="modal-header">
+    <h3 class="modal-title custom-font">{{ 'Modal.QUESTION1' | translate }}</h3>
+</div>
+<div class="modal-body">
+
+ <section class="tile simple"> <!-- tile widget --> 
+    <div class="tile-widget bg-slategray p-20"> 
+        <div class="media"> 
+            <div class="pull-left thumb"> 
+                <img class="media-object img-circle" ng-src="{{ post.page_picture }}" alt=""> 
+            </div> 
+            <div class="media-body"> 
+                <h4 class="media-heading mb-0 mt-10"> <strong>{{ post.page_name }}</strong></h4> 
+                <small class="text-transparent-white">{{ post.page_likes | number }}  <i class="fa fa-thumbs-o-up"></i></small> 
+            </div> 
+        </div> 
+    </div> <!-- /tile widget --> <!-- tile body --> 
+    <div class="tile-body p-0"> 
+        <div class="list-group no-radius no-border"> 
+            <div class="list-group-item tile-header cover">
+                <img ng-src="{{ post.picture }}" alt="" class="img-responsive" style="margin-left: auto; margin-right: auto; margin-bottom: 5px; margin-top: 5px;">
+            </div>
+            <div class="list-group-item"> 
+                <div class="row"> 
+                    <!-- col --> 
+                    <div class="col-md-2 text-center b-r b-solid"> 
+                        <span class="text-lightred"><i class="fa fa-thumbs-o-up">
+                            </i> {{ post.likes | number }} 
+                        </span> 
+                    </div> 
+                    <!-- /col --> 
+                    <!-- col --> 
+                    <div class="col-md-2 text-center b-r b-solid"> 
+                        <span class="text-greensea">
+                            <i class="fa fa-share-alt"></i> {{ post.shares | number }}
+                        </span> </div> 
+                    <!-- /col --> 
+                    <!-- col --> 
+                    <div class="col-md-2 text-center b-r b-solid"> 
+                        <span class="text-blue"><i class="fa fa-comment-o">
+                            </i> {{ post.comments | number }}
+                        </span> 
+                    </div> 
+                    <!-- /col -->
+                    <!-- col --> 
+                    <div class="col-md-4 text-center b-r b-solid"> 
+                        <span class="text-orange"><i class="fa fa-star">
+                            </i> {{ post.score  | number:12 }}
+                        </span> 
+                    </div> 
+                    <!-- /col -->
+                    <!-- col --> 
+                    <div class="col-md-2 text-center"> 
+                        <span ng-show="post.type == 'video'" class="label bg-red"><i class="fa fa-film"></i></span>
+                        <span ng-show="post.type == 'link'" class="label bg-cyan"><i class="fa fa-link"></i></span>
+                        <span ng-show="post.type == 'photo'" class="label bg-greensea"><i class="fa fa-picture-o"></i></span> 
+                    </div> 
+                    <!-- /col --> 
+                </div> 
+            </div> 
+
+            <div href="#" class="list-group-item"> 
+                <h4 class="media-heading mb-0 mt-10" align="justify"> <strong>{{ post.message }}</strong></h4>
+            </div> 
+
+            <div href="#" class="list-group-item" style="padding-left: 41%;"> 
+                <a type="button" ng-href="{{post.link}}" target="_blank" class="btn btn-info btn-border btn-rounded b-1x read-more">{{ 'Modal.READMORE' | translate }}</a>
+            </div>
+        </div> 
+    </div> <!-- /tile body --> 
+</section>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-default btn-border" ng-click="delete()">{{ 'Modal.DELETE' | translate }}</button>
+    <button class="btn btn-default btn-border" ng-click="cancel()">{{ 'Modal.CANCEL' | translate }}</button>
+</div>

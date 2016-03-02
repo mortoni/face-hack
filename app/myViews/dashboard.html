@@ -1,0 +1,90 @@
+<div class="page page-dashboard">
+    <!-- pageheader -->
+    <div class="pageheader">
+        <h2>{{page.title}} <span></h2>
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <a ui-sref="app.dashboard"><i class="fa fa-home"></i> Face-hack</a>
+                </li>
+                <li>
+                    <a ui-sref="app.dashboard">{{page.title}}</a>
+                </li>
+            </ul>
+
+            <div ng-controller="DaterangepickerCtrl" class="page-toolbar">
+                <a class="btn btn-default no-border"  style="cursor: default;">
+                    <i class="fa fa-calendar"></i>&nbsp;&nbsp;<span>{{startDate}}</span>&nbsp;&nbsp;
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /pageheader -->
+    <br>
+    <div class="col-sm-3"></div>
+    <!-- row -->
+	<div class="row">
+		<md-input-container class="col-sm-5" flex>
+			<label>{{ 'Dashboard.ENTRY1' | translate }}</label>
+			<input ng-model="pageName" ng-keyup="$event.keyCode == 13 && searchPage()">
+                <md-tooltip>{{ 'Dashboard.TOOLTIP' | translate }}</md-tooltip> 
+            </input>
+		</md-input-container>
+	</div>
+    <!-- /row -->
+	<div class="col-sm-4"></div>
+    <br>  
+    <br>
+    <!-- cards -->
+    <div class="card-container col-lg-3 col-sm-6 col-sm-12" ng-repeat="page in pageFind" ng-show="pageFind != null">
+        <!-- card -->
+        <div class="card">
+            <!-- front card-->
+            <div class="front bg-blue">
+              <!-- row -->
+                <div class="row">
+                    <!-- col -->
+                    <div class="col-xs-4">
+                        <img ng-src="{{ page.picture }}" class="post-image-dash">
+                    </div>
+                    <!-- /col -->
+                    <!-- col -->
+                    <div class="col-xs-8">
+                        <p class="text-lg text-strong mb-0">{{ page.likes | number }} <i class="fa fa-thumbs-o-up"></i></p>
+                        <p class="text-sm text-strong mb-0 p-dash">{{page.name}}</p>
+                    </div>
+                    <!-- /col -->
+                </div>
+              <!-- /row -->
+            </div>
+            <!-- /front card-->
+            <!-- back card-->
+            <div class="back bg-slategray">
+                <!-- row -->
+                <div class="row">
+                    <!-- col -->
+                    <div class="col-xs-4">
+                        <a ng-click="hackPage(page)">
+        				    <i class="fa fa-search fa-2x"></i> {{ 'Dashboard.SPY' | translate }}	
+        			    </a>
+                    </div>
+                    <!-- /col -->
+                    <!-- col -->
+                    <div class="col-xs-4">
+                        <a ng-click="getPage(page)"><i class="fa fa-download fa-2x"></i> {{ 'Dashboard.HACK' | translate }}</a>
+                    </div>
+                    <!-- /col -->
+                    <!-- col -->
+                    <div class="col-xs-4">
+                        <a ng-click="infoPage(page)"><i class="fa fa-ellipsis-h fa-2x"></i> {{ 'Dashboard.MORE' | translate }}</a>
+                    </div>
+                    <!-- /col -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /back card-->
+        </div>
+        <!-- /card -->
+    </div>
+    <!-- /cards -->
+</div>

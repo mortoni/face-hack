@@ -1,0 +1,81 @@
+{
+  "Menu": {
+    "DASHBOARD": "Dashboard",
+    "HACK": "Hack",
+    "DATABASE": "Banco de Dados",
+    "ABOUTME": "Sobre eu",
+    "NAVIGATION": "Navegação",
+    "SUMMARY": "Resumo",
+    "WEEKHACK": "Hack da Semana",
+    "WEEKPOST": "Posts da Semana"
+	},
+
+  "Header": {
+	"HEADERCOL": "Cor do Cabeçalho",
+    "BRANDCOL": "Cor do Logo", 
+    "SIDEBARCOL": "Cor do Menu",
+    "ACTIVECOL": "Cor Ativa",
+    "FIXHEADER": "Cabeçalho Fixo",
+    "FIXASIDE": "Menu Fixo",
+    "PROFILE": "Perfil",
+    "TASKS": "Tarefas",
+    "SETTINGS": "Configurações",
+    "LOCK": "Bloquear",
+    "LOGOUT": "Sair"
+	},
+
+  "Dashboard": {
+    "ENTRY1": "Página do Facebook",
+    "SPY": "ESPIAR",
+    "HACK": "HACK",
+    "MORE": "Mais",
+    "TOOLTIP": "Tecle 'Enter' para hackear"
+   },
+
+  "Database":{
+    "HACK": "Hackeando",
+    "FEED": "Conteúdo",
+    "PAGE": "Página",
+    "TYPE": "Tipo",
+    "LIKES": "Likes",
+    "SHARES": "Shares",
+    "DATE": "Data",
+    "COMENTS": "Comentários",
+    "SCORE": "Pontuação",
+    "DELETE": "Deletar",
+    "EDIT": "Editar",
+    "VIEW": "Ver",
+    "SHARE": "Compartilhar",
+    "REFRESH": "Atualizar"
+  },
+
+  "Spy":{
+    "PAUSE": "Pausar",
+    "RESUME": "Continuar",
+    "DELETE": "Deletar",
+    "HACK": "Hackeando",
+    "DETAILS": "detalhes",
+    "FEED": "Conteúdo",
+    "PAGE": "Página",
+    "TYPE": "Tipo",
+    "LIKES": "Likes",
+    "SHARES": "Shares",
+    "DATE": "Data"
+  },
+
+  "Hack":{
+    "READMORE": "Mais Sobre"
+  },
+  
+  "Modal": {
+    "READMORE": "Mais Sobre",
+    "DELETE": "Deletar",
+    "CANCEL": "Cancelar",
+    "QUESTION1": "Você tem certeza?",
+    "INFO": "Informação da página",
+    "QUESTION2": "Share post",
+    "SHARE": "Share",
+    "QUESTION3": "Post"
+  }
+    
+}

@@ -1,0 +1,483 @@
+{
+    "project": {},
+    "files": {
+        "face-database.js": {
+            "name": "face-database.js",
+            "modules": {},
+            "classes": {
+                "DataBaseCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "face-getPage.js": {
+            "name": "face-getPage.js",
+            "modules": {},
+            "classes": {
+                "PageGetCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "face-hackPage.js": {
+            "name": "face-hackPage.js",
+            "modules": {},
+            "classes": {
+                "HackPageCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "face-login.js": {
+            "name": "face-login.js",
+            "modules": {},
+            "classes": {
+                "LoginCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "face-modal.js": {
+            "name": "face-modal.js",
+            "modules": {},
+            "classes": {
+                "ModalCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "face-search.js": {
+            "name": "face-search.js",
+            "modules": {},
+            "classes": {
+                "SearchCtrl": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "DataBaseCtrl": {
+            "name": "DataBaseCtrl",
+            "shortname": "DataBaseCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "face-database.js",
+            "line": 1,
+            "description": "Database agroup all methods and configuration for Database controller.",
+            "is_constructor": 1
+        },
+        "PageGetCtrl": {
+            "name": "PageGetCtrl",
+            "shortname": "PageGetCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "face-getPage.js",
+            "line": 1,
+            "description": "PageGet Controller that will configure pages that got hack.",
+            "is_constructor": 1
+        },
+        "HackPageCtrl": {
+            "name": "HackPageCtrl",
+            "shortname": "HackPageCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "face-hackPage.js",
+            "line": 1,
+            "description": "HackPage agroup all methods and configuration for those hacked pages.",
+            "is_constructor": 1
+        },
+        "LoginCtrl": {
+            "name": "LoginCtrl",
+            "shortname": "LoginCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "face-login.js",
+            "line": 1,
+            "description": "Login agroup all methods and configuration for login.",
+            "is_constructor": 1
+        },
+        "ModalCtrl": {
+            "name": "ModalCtrl",
+            "shortname": "ModalCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "face-modal.js",
+            "line": 1,
+            "description": "Modal will control all modals.",
+            "is_constructor": 1
+        },
+        "SearchCtrl": {
+            "name": "SearchCtrl",
+            "shortname": "SearchCtrl",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "face-search.js",
+            "line": 1,
+            "description": "Search will manipulate all information to be serached and after.",
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "face-database.js",
+            "line": 26,
+            "description": "The set up of options of data table",
+            "itemtype": "property",
+            "name": "$scope.dtOptions",
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 35,
+            "description": "The set up of data table columns",
+            "itemtype": "property",
+            "name": "$scope.dtColumnDefs",
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 64,
+            "itemtype": "method",
+            "name": "deletePost",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be deleted",
+                    "type": "Object"
+                }
+            ],
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 82,
+            "itemtype": "method",
+            "name": "editPost",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be edited",
+                    "type": "Object"
+                }
+            ],
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 90,
+            "itemtype": "method",
+            "name": "viewPost",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be viewed",
+                    "type": "Object"
+                }
+            ],
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 108,
+            "itemtype": "method",
+            "name": "sharePost",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be shared",
+                    "type": "Object"
+                }
+            ],
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 126,
+            "itemtype": "method",
+            "name": "updatePosts",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be updated",
+                    "type": "Object"
+                }
+            ],
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 134,
+            "itemtype": "method",
+            "name": "activate",
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-database.js",
+            "line": 141,
+            "itemtype": "method",
+            "name": "detailPost",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be detailed",
+                    "type": "Object"
+                }
+            ],
+            "class": "DataBaseCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 18,
+            "description": "The set up of options of data table",
+            "itemtype": "property",
+            "name": "$scope.dtOptions",
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 24,
+            "description": "The set up of data table columns",
+            "itemtype": "property",
+            "name": "$scope.dtColumnDefs",
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 44,
+            "itemtype": "method",
+            "name": "viewPost",
+            "params": [
+                {
+                    "name": "post",
+                    "description": "The post to be viewed",
+                    "type": "Object"
+                }
+            ],
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 52,
+            "itemtype": "method",
+            "name": "viewPage",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be viewed",
+                    "type": "Object"
+                }
+            ],
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 60,
+            "itemtype": "method",
+            "name": "deletePage",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be deleted",
+                    "type": "Object"
+                }
+            ],
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 72,
+            "itemtype": "method",
+            "name": "resume",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be resume",
+                    "type": "Object"
+                }
+            ],
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 80,
+            "itemtype": "method",
+            "name": "pause",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be pause",
+                    "type": "Object"
+                }
+            ],
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 88,
+            "description": "This method will be called each 5 second, updating content of each feed hacked of those resumed pages",
+            "itemtype": "method",
+            "name": "setInterval",
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-getPage.js",
+            "line": 137,
+            "itemtype": "method",
+            "name": "updatePost",
+            "params": [
+                {
+                    "name": "e",
+                    "description": "The index of selected post",
+                    "type": "Object"
+                },
+                {
+                    "name": "post",
+                    "description": "The post to be updated",
+                    "type": "Object"
+                }
+            ],
+            "class": "PageGetCtrl"
+        },
+        {
+            "file": "face-hackPage.js",
+            "line": 26,
+            "description": "Will activate progress bar and then will bring all content of pages.",
+            "itemtype": "method",
+            "name": "activate",
+            "class": "HackPageCtrl"
+        },
+        {
+            "file": "face-login.js",
+            "line": 19,
+            "description": "This method will conect the user to application through the facebook.",
+            "itemtype": "method",
+            "name": "doFacebookLogin",
+            "class": "LoginCtrl"
+        },
+        {
+            "file": "face-login.js",
+            "line": 54,
+            "itemtype": "method",
+            "name": "logout",
+            "class": "LoginCtrl"
+        },
+        {
+            "file": "face-modal.js",
+            "line": 23,
+            "description": "The post to be manipulated by methods",
+            "itemtype": "property",
+            "name": "$scope.post",
+            "class": "ModalCtrl"
+        },
+        {
+            "file": "face-modal.js",
+            "line": 30,
+            "description": "This method will call a Toast in case of sucess action",
+            "itemtype": "method",
+            "name": "successToast",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "Message to be displayed.",
+                    "type": "String"
+                }
+            ],
+            "class": "ModalCtrl"
+        },
+        {
+            "file": "face-modal.js",
+            "line": 43,
+            "itemtype": "method",
+            "name": "delete",
+            "class": "ModalCtrl"
+        },
+        {
+            "file": "face-modal.js",
+            "line": 54,
+            "itemtype": "method",
+            "name": "cancel",
+            "class": "ModalCtrl"
+        },
+        {
+            "file": "face-modal.js",
+            "line": 61,
+            "itemtype": "method",
+            "name": "share",
+            "class": "ModalCtrl"
+        },
+        {
+            "file": "face-search.js",
+            "line": 32,
+            "itemtype": "method",
+            "name": "infoPage",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be informed",
+                    "type": "Object"
+                }
+            ],
+            "class": "SearchCtrl"
+        },
+        {
+            "file": "face-search.js",
+            "line": 50,
+            "description": "This method will search for pages",
+            "itemtype": "method",
+            "name": "searchPage",
+            "class": "SearchCtrl"
+        },
+        {
+            "file": "face-search.js",
+            "line": 82,
+            "description": "This method will put the page on hackpage list and then send to hack page",
+            "itemtype": "method",
+            "name": "hackPage",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be hacked",
+                    "type": "Object"
+                }
+            ],
+            "class": "SearchCtrl"
+        },
+        {
+            "file": "face-search.js",
+            "line": 92,
+            "description": "This method will spy the selected page",
+            "itemtype": "method",
+            "name": "getPage",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "The page to be spy",
+                    "type": "Object"
+                }
+            ],
+            "class": "SearchCtrl"
+        }
+    ],
+    "warnings": []
+}

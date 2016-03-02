@@ -1,0 +1,54 @@
+<div id="sidebar-wrap" ng-controller="NavCtrl">
+  <accordion close-others="oneAtTime" slimscroll="{height: '100%'}">
+
+    <accordion-group is-open="status.isFirstOpen" ng-class="{'open': status.isFirstOpen, 'closed': !status.isFirstOpen}">
+      <accordion-heading>
+        Navigation <i class="fa" ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}"></i>
+      </accordion-heading>
+      <ul id="navigation" nav-collapse ripple>
+          
+        <li ui-sref-active="active"><a ui-sref="app.dashboard"><fa name="dashboard"></fa> <span>{{ 'Menu.DASHBOARD' | translate }}</span></a></li>
+          
+        <li ui-sref-active="active"><a ui-sref="app.get"><fa name="diamond"></fa> <span>{{ 'Menu.HACK' | translate }}</span></a></li>
+           
+        <li ui-sref-active="active"><a ui-sref="app.database"><fa name="database"></fa> <span>{{ 'Menu.DATABASE' | translate }}</span> <span class="badge bg-lightred">{{ postCount }}</span></a>
+            
+        <li ui-sref-active="active"><a ui-sref="app.2"><fa name="user-secret"></fa> <span>{{ 'Menu.ABOUTME' | translate }}</span></a>
+        
+      </ul>
+    </accordion-group>
+
+    <accordion-group is-open="status.isSecondOpen" class="charts" ng-class="{'open': status.isSecondOpen, 'closed': !status.isSecondOpen}">
+      <accordion-heading>
+        {{ 'Menu.SUMMARY' | translate }} <i class="fa" ng-class="{'fa-angle-up': status.isSecondOpen, 'fa-angle-down': !status.isSecondOpen}"></i>
+      </accordion-heading>
+
+      <div ng-controller="SparklineCtrl" class="summary">
+
+        <div class="media">
+          <a class="pull-right" href="#">
+            <span sparkline data="navChart1.data" options="navChart1.options"></span>
+          </a>
+          <div class="media-body">
+            {{ 'Menu.WEEKHACK' | translate }}
+            <h4 class="media-heading">26, 149</h4>
+          </div>
+        </div>
+
+        <div class="media">
+          <a class="pull-right" href="#">
+            <span sparkline data="navChart2.data" options="navChart2.options"></span>
+          </a>
+          <div class="media-body">
+            {{ 'Menu.WEEKPOST' | translate }}
+            <h4 class="media-heading">318, 651</h4>
+          </div>
+        </div>
+
+      </div>
+
+    </accordion-group>
+
+
+  </accordion>
+</div>

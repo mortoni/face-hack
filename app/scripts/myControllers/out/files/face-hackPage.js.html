@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>face-hackPage.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/DataBaseCtrl.html">DataBaseCtrl</a></li>
+                                <li><a href="../classes/HackPageCtrl.html">HackPageCtrl</a></li>
+                                <li><a href="../classes/LoginCtrl.html">LoginCtrl</a></li>
+                                <li><a href="../classes/ModalCtrl.html">ModalCtrl</a></li>
+                                <li><a href="../classes/PageGetCtrl.html">PageGetCtrl</a></li>
+                                <li><a href="../classes/SearchCtrl.html">SearchCtrl</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: face-hackPage.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+HackPage agroup all methods and configuration for those hacked pages.
+
+@class HackPageCtrl
+@constructor
+*/
+
+(function(){
+    &#x27;use strict&#x27;;
+
+    app.controller(&#x27;HackPageCtrl&#x27;, HackPageCtrl);
+
+    HackPageCtrl.$inject = [&#x27;$scope&#x27;, &#x27;$rootScope&#x27;, &#x27;ngProgressFactory&#x27;];
+
+    function HackPageCtrl($scope, $rootScope, ngProgressFactory){
+    	$scope.contained_progressbar = ngProgressFactory.createInstance();
+
+		if($rootScope.selectedPage){
+			$scope.page = {
+			  title: $rootScope.selectedPage.name,
+			  subtitle: &#x27;Place subtitle here...&#x27;
+			};
+			
+			activate();
+		}
+		/**
+		Will activate progress bar and then will bring all content of pages.
+		@method activate
+		*/
+		function activate(){
+			$scope.contained_progressbar.setParent(document.getElementById(&#x27;demo_contained&#x27;));
+            $scope.contained_progressbar.setColor(&#x27;red&#x27;);
+            $scope.contained_progressbar.setAbsolute();
+            $scope.contained_progressbar.start();
+
+			if(!$scope.pagehacked){
+				$scope.pagehacked = [];
+			}
+            FB.api(
+                &quot;/&quot;+$rootScope.selectedPage.id+&quot;/feed?fields=message,full_picture,link,source,type,created_time,shares,comments.summary(true),likes.summary(true),description&amp;limit=100&amp;since=15-08-05&quot;,
+                function (response) {
+                	$scope.contained_progressbar.complete();
+                    if (response &amp;&amp; !response.error) {
+                        $scope.datahacked = response.data;
+						$scope.datahacked.forEach(function(page) {
+							if(page.type == &#x27;link&#x27; || 
+							   page.type == &#x27;photo&#x27; ||
+							   page.type == &#x27;video&#x27;){
+							
+								if (typeof page.shares === &#x27;undefined&#x27;){
+									page.shares = [];
+									page.shares.count = 0;
+								}
+								$scope.pagehacked.push(page);
+							}
+						});
+                        $scope.$apply();
+                }
+            });
+		}
+	}
+	
+})();	
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
